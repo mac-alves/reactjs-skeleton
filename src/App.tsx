@@ -7,7 +7,7 @@ import light from './styles/themes/light';
 import Routes from './routes';
 import { AuthProvider } from './contexts/auth';
 
-import { Container } from './styles/components/Container';
+import { Container } from './components/Container';
 
 const App: React.FC = () => {
   return (
