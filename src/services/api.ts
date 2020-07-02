@@ -1,7 +1,7 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 
 const configJson: AxiosRequestConfig = {
-    baseURL: 'http://localhost:8000',
+    baseURL: process.env.API_URL,
     headers: {
         "Content-type": "application/json"
     }
