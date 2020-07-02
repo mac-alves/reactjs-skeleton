@@ -1,11 +1,25 @@
 import React from 'react';
-import './App.css';
+import { ThemeProvider } from 'styled-components';
 
-function App() {
+import GlobalStyle from './styles/global';
+import light from './styles/themes/light';
+
+import Routes from './routes';
+import { AuthProvider } from './contexts/auth';
+
+import { Container } from './styles/components/Container';
+
+const App: React.FC = () => {
   return (
-    <div>
-      <h2>Inicio</h2>
-    </div>
+    <ThemeProvider theme={light}>
+      <GlobalStyle />
+
+      <Container>
+        <AuthProvider >
+          <Routes />
+        </AuthProvider>
+      </Container>
+    </ThemeProvider>
   );
 }
 
